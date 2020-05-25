@@ -69,10 +69,10 @@
         </Grid>
         
         <!-- Title -->
-        <TextBlock x:Name="Title" Text="GtaManager" FontWeight="Bold" FontSize="20" Foreground="#fff" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="Title" Text="GtaManager" FontWeight="Bold" FontSize="20" Foreground="#dcddde" HorizontalAlignment="Center"/>
 
         <!-- Casino -->
-        <TextBlock Text="Casino" FontWeight="Bold" FontSize="14" Foreground="#fff" Margin="8 2 0 0"/>
+        <TextBlock Text="Casino" FontWeight="Bold" FontSize="14" Foreground="#dcddde" Margin="8 2 0 0"/>
 
         <Grid x:Name="Casino" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#00a6ff">
             <Grid.ColumnDefinitions>
@@ -80,9 +80,8 @@
                 <ColumnDefinition Width="30"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            
-            <Label Content="Casino Lucky Wheel" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right"></Label>
-            <!--<Button Content="Spinned" Grid.Column="1" Grid.Row="0" Margin="2,2,2,2" Height="20" FontSize="12" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Foreground="#afafaf" Background="#404040"/>-->
+
+            <Label Content="Casino Lucky Wheel" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle}"></Label>
             <Button Grid.Column="1"
                     Grid.Row="0"
                     Style="{StaticResource CasinoButtonStyle}"
@@ -93,7 +92,7 @@
                 </Viewbox>
             </Button>
 
-            <TextBlock Text="hh/mm" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4 0"/>
+            <TextBlock Text="hh/mm" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4 0" Style="{StaticResource TextBlockStyle}"/>
 
         </Grid>
         
@@ -114,8 +113,8 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            
-            <Label Content="Bunker Supplies" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Background="#fa0000"></Label>
+
+            <Label Content="Bunker Supplies" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle}" Background="#fa0000"></Label>
             <Button Grid.Column="1"
                     Grid.Row="0"
                     Style="{StaticResource BusinessButtonStyle}"
@@ -125,8 +124,8 @@
                     <Image Source="icons/resupply.png"/>
                 </Viewbox>
             </Button>
-            
-            <Label Content="Coke Supplies" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"></Label>
+
+            <Label Content="Coke Supplies" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelStyle}"></Label>
             <Button Grid.Column="1"
                     Grid.Row="1"
                     Style="{StaticResource BusinessButtonStyle}"
@@ -137,8 +136,8 @@
                 </Viewbox>
             </Button>
 
-            
-            <Label Content="Cash Supplies" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right"></Label>
+
+            <Label Content="Cash Supplies" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelStyle}"></Label>
             <Button Grid.Column="1"
                     Grid.Row="2"
                     Style="{StaticResource BusinessButtonStyle}"
@@ -149,8 +148,8 @@
                 </Viewbox>
             </Button>
 
-            
-            <Label Content="Meth Supplies" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right"></Label>
+
+            <Label Content="Meth Supplies" Grid.Row="3" Grid.Column="0" Style="{StaticResource LabelStyle}"></Label>
             <Button Grid.Column="1"
                     Grid.Row="3"
                     Style="{StaticResource BusinessButtonStyle}"
@@ -161,8 +160,8 @@
                 </Viewbox>
             </Button>
 
-            
-            <Label Content="Weed Supplies" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right"></Label>
+
+            <Label Content="Weed Supplies" Grid.Row="4" Grid.Column="0" Style="{StaticResource LabelStyle}"></Label>
             <Button Grid.Column="1"
                     Grid.Row="4"
                     Style="{StaticResource BusinessButtonStyle}"
