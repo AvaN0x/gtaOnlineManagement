@@ -1,0 +1,178 @@
+﻿
+<Window x:Class="gtaOnlineManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gtaOnlineManagement"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="264" 
+        Width="400" 
+        ResizeMode="NoResize" 
+        Topmost="True"
+        WindowStyle="None" 
+        Background="#26292f"
+        WindowStartupLocation="CenterScreen">
+
+    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Vertical" Margin="0">
+        <!-- Window bar -->
+        <Grid Background="#16191f">
+            <Image Source="icons/drag.png" 
+                   HorizontalAlignment="Left" 
+                   Height="16px" 
+                   Margin="2 0 0 0" 
+                   MouseDown="Drag_MouseDown" 
+                   Cursor="SizeAll"></Image>
+            <CheckBox x:Name="cb_OnTop" 
+                      Content="Always on Top" 
+                      IsChecked="True"
+                      HorizontalAlignment="Right" 
+                      VerticalAlignment="Top" 
+                      FontSize="12" 
+                      Height="16" 
+                      Foreground="#fff" 
+                      Margin="0 2 24 0"
+                      Checked="OnTop_Checked" 
+                      Unchecked="OnTop_Unchecked"/>
+            <Button x:Name="btn_close" 
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Top" 
+                    FontSize="12" 
+                    Width="20"
+                    Height="20"
+                    BorderBrush="#26292f"
+                    Click="btn_close_Click">
+                <Viewbox>
+                    <Image Source="icons/close.png"/>
+                </Viewbox>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#26292f30"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#505359"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+        
+        <!-- Title -->
+        <TextBlock x:Name="Title" Text="GtaManager" FontWeight="Bold" FontSize="20" Foreground="#fff" HorizontalAlignment="Center"/>
+
+        <!-- Casino -->
+        <TextBlock Text="Casino" FontWeight="Bold" FontSize="14" Foreground="#fff" Margin="8 2 0 0"/>
+
+        <Grid x:Name="Casino" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#00a6ff">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Content="Casino Lucky Wheel" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right"></Label>
+            <!--<Button Content="Spinned" Grid.Column="1" Grid.Row="0" Margin="2,2,2,2" Height="20" FontSize="12" FontFamily="Arial Rounded MT Bold" FontWeight="Bold" Foreground="#afafaf" Background="#404040"/>-->
+            <Button Grid.Column="1"
+                    Grid.Row="0"
+                    Style="{StaticResource CasinoButtonStyle}"
+                    IsEnabled="True">
+                <Viewbox Width="16"
+                         Height="16">
+                    <Image Source="icons/spin.png"/>
+                </Viewbox>
+            </Button>
+
+            <TextBlock Text="hh/mm" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4 0"/>
+
+        </Grid>
+        
+        <!-- Business -->
+        <TextBlock Text="Business" FontWeight="Bold" FontSize="14" Foreground="#fff" Margin="8 2 0 0"/>
+
+        <Grid x:Name="Business" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="44"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            
+            <Label Content="Bunker Supplies" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Background="#fa0000"></Label>
+            <Button Grid.Column="1"
+                    Grid.Row="0"
+                    Style="{StaticResource BusinessButtonStyle}"
+                    IsEnabled="True">
+                <Viewbox Width="16"
+                         Height="16">
+                    <Image Source="icons/resupply.png"/>
+                </Viewbox>
+            </Button>
+            
+            <Label Content="Coke Supplies" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"></Label>
+            <Button Grid.Column="1"
+                    Grid.Row="1"
+                    Style="{StaticResource BusinessButtonStyle}"
+                    IsEnabled="False">
+                <Viewbox Width="16"
+                         Height="16">
+                    <Image Source="icons/resupply.png"/>
+                </Viewbox>
+            </Button>
+
+            
+            <Label Content="Cash Supplies" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right"></Label>
+            <Button Grid.Column="1"
+                    Grid.Row="2"
+                    Style="{StaticResource BusinessButtonStyle}"
+                    IsEnabled="False">
+                <Viewbox Width="16"
+                         Height="16">
+                    <Image Source="icons/resupply.png"/>
+                </Viewbox>
+            </Button>
+
+            
+            <Label Content="Meth Supplies" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right"></Label>
+            <Button Grid.Column="1"
+                    Grid.Row="3"
+                    Style="{StaticResource BusinessButtonStyle}"
+                    IsEnabled="False">
+                <Viewbox Width="16"
+                         Height="16">
+                    <Image Source="icons/resupply.png"/>
+                </Viewbox>
+            </Button>
+
+            
+            <Label Content="Weed Supplies" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right"></Label>
+            <Button Grid.Column="1"
+                    Grid.Row="4"
+                    Style="{StaticResource BusinessButtonStyle}"
+                    IsEnabled="False">
+                <Viewbox Width="16"
+                         Height="16">
+                    <Image Source="icons/resupply.png"/>
+                </Viewbox>
+            </Button>
+
+        </Grid>
+    </StackPanel>
+</Window>
