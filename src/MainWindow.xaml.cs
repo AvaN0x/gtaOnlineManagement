@@ -27,7 +27,6 @@ namespace gtaOnlineManagement
             var ui = new Label();
 
             ui.Content = "ui";
-            Grid.SetColumn(ui, 2);
             ui.Background = new SolidColorBrush(Colors.Orange);
 
             ui.Foreground = new SolidColorBrush(Colors.Black);

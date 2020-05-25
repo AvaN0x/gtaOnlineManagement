@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow"
         Icon="https://avatars3.githubusercontent.com/u/27494805"
-        Height="264" 
+        Height="270" 
         Width="400" 
         ResizeMode="NoResize" 
         Topmost="True"
@@ -73,106 +73,79 @@
         <TextBlock x:Name="Title" Text="GtaManager" FontWeight="Bold" FontSize="20" Foreground="#dcddde" HorizontalAlignment="Center"/>
 
         <!-- Casino -->
-        <TextBlock Text="Casino" FontWeight="Bold" FontSize="14" Foreground="#dcddde" Margin="8 2 0 0"/>
-
-        <Grid x:Name="Casino" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#00a6ff">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="30"/>
-                <ColumnDefinition Width="auto"/>
-            </Grid.ColumnDefinitions>
-
-            <Label Content="Casino Lucky Wheel" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle}"></Label>
-            <Button Grid.Column="1"
-                    Grid.Row="0"
-                    Style="{StaticResource CasinoButtonStyle}"
+        <StackPanel x:Name="Casino" Orientation="Vertical">
+            <TextBlock Text="Casino" FontWeight="Bold" FontSize="14" Foreground="#dcddde" Margin="8 2 0 0"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#00a6ff">
+                <Label Content="Casino Lucky Wheel" Style="{StaticResource LabelStyle}"></Label>
+                <Button Style="{StaticResource CasinoButtonStyle}"
                     IsEnabled="True">
-                <Viewbox Width="16"
-                         Height="16">
-                    <Image Source="icons/spin.png"/>
-                </Viewbox>
-            </Button>
+                    <Viewbox Width="16" Height="16">
+                        <Image Source="icons/spin.png"/>
+                    </Viewbox>
+                </Button>
+                <TextBlock Text="hh/mm" Style="{StaticResource TextBlockStyle}"/>
+            </StackPanel>
+        </StackPanel>
 
-            <TextBlock Text="hh/mm" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4 0" Style="{StaticResource TextBlockStyle}"/>
 
-        </Grid>
-        
         <!-- Business -->
-        <TextBlock Text="Business" FontWeight="Bold" FontSize="14" Foreground="#fff" Margin="8 2 0 0"/>
-
-        <Grid x:Name="Business" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="30"/>
-                <ColumnDefinition Width="44"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-
-            <Label Content="Bunker Supplies" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle}" Background="#fa0000"></Label>
-            <Button Grid.Column="1"
-                    Grid.Row="0"
-                    Style="{StaticResource BusinessButtonStyle}"
+        <StackPanel x:Name="Business" Orientation="Vertical">
+            <TextBlock Text="Business" FontWeight="Bold" FontSize="14" Foreground="#fff" Margin="8 2 0 0"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#fa0000">
+                <Label Content="Bunker Supplies" Style="{StaticResource LabelStyle}"></Label>
+                <Button Style="{StaticResource BusinessButtonStyle}"
                     IsEnabled="True">
-                <Viewbox Width="16"
-                         Height="16">
-                    <Image Source="icons/resupply.png"/>
-                </Viewbox>
-            </Button>
-
-            <Label Content="Coke Supplies" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelStyle}"></Label>
-            <Button Grid.Column="1"
-                    Grid.Row="1"
-                    Style="{StaticResource BusinessButtonStyle}"
+                    <Viewbox Width="16" Height="16">
+                        <Image Source="icons/resupply.png"/>
+                    </Viewbox>
+                </Button>
+                <TextBlock Text="hh/mm" Style="{StaticResource TextBlockStyle}"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Label Content="Coke Supplies" Style="{StaticResource LabelStyle}"></Label>
+                <Button Style="{StaticResource BusinessButtonStyle}"
                     IsEnabled="False">
-                <Viewbox Width="16"
-                         Height="16">
-                    <Image Source="icons/resupply.png"/>
-                </Viewbox>
-            </Button>
+                    <Viewbox Width="16" Height="16">
+                        <Image Source="icons/resupply.png"/>
+                    </Viewbox>
+                </Button>
+                <TextBlock Text="hh/mm" Style="{StaticResource TextBlockStyle}"/>
+            </StackPanel>
 
-
-            <Label Content="Cash Supplies" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelStyle}"></Label>
-            <Button Grid.Column="1"
-                    Grid.Row="2"
-                    Style="{StaticResource BusinessButtonStyle}"
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Label Content="Cash Supplies" Style="{StaticResource LabelStyle}"></Label>
+                <Button Style="{StaticResource BusinessButtonStyle}"
                     IsEnabled="False">
-                <Viewbox Width="16"
-                         Height="16">
-                    <Image Source="icons/resupply.png"/>
-                </Viewbox>
-            </Button>
+                    <Viewbox Width="16" Height="16">
+                        <Image Source="icons/resupply.png"/>
+                    </Viewbox>
+                </Button>
+                <TextBlock Text="hh/mm" Style="{StaticResource TextBlockStyle}"/>
+            </StackPanel>
 
-
-            <Label Content="Meth Supplies" Grid.Row="3" Grid.Column="0" Style="{StaticResource LabelStyle}"></Label>
-            <Button Grid.Column="1"
-                    Grid.Row="3"
-                    Style="{StaticResource BusinessButtonStyle}"
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Label Content="Meth Supplies" Style="{StaticResource LabelStyle}"></Label>
+                <Button Style="{StaticResource BusinessButtonStyle}"
                     IsEnabled="False">
-                <Viewbox Width="16"
-                         Height="16">
-                    <Image Source="icons/resupply.png"/>
-                </Viewbox>
-            </Button>
+                    <Viewbox Width="16" Height="16">
+                        <Image Source="icons/resupply.png"/>
+                    </Viewbox>
+                </Button>
+                <TextBlock Text="hh/mm" Style="{StaticResource TextBlockStyle}"/>
+            </StackPanel>
 
-
-            <Label Content="Weed Supplies" Grid.Row="4" Grid.Column="0" Style="{StaticResource LabelStyle}"></Label>
-            <Button Grid.Column="1"
-                    Grid.Row="4"
-                    Style="{StaticResource BusinessButtonStyle}"
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Label Content="Weed Supplies" Style="{StaticResource LabelStyle}"></Label>
+                <Button Style="{StaticResource BusinessButtonStyle}"
                     IsEnabled="False">
-                <Viewbox Width="16"
-                         Height="16">
-                    <Image Source="icons/resupply.png"/>
-                </Viewbox>
-            </Button>
+                    <Viewbox Width="16" Height="16">
+                        <Image Source="icons/resupply.png"/>
+                    </Viewbox>
+                </Button>
+                <TextBlock Text="hh/mm" Style="{StaticResource TextBlockStyle}"/>
+            </StackPanel>
 
-        </Grid>
+        </StackPanel>
     </StackPanel>
 </Window>
