@@ -75,14 +75,14 @@
         <!-- Casino -->
         <StackPanel x:Name="Casino" Orientation="Vertical">
             <TextBlock Text="Casino" FontWeight="Bold" FontSize="14" Foreground="#dcddde" Margin="8 2 0 0"/>
-            <StackPanel Orientation="Horizontal" Background="#00a6ff">
+            <!--<StackPanel Orientation="Horizontal" Background="#00a6ff">
                 <Label Content="Casino Lucky Wheel" Style="{StaticResource LabelStyle}"></Label>
                 <Button Style="{StaticResource CasinoButtonStyle}"
                     IsEnabled="True">
                     <Image Source="icons/spin.png" Width="16" Height="16"/>
                 </Button>
                 <TextBlock Text="hh/mm" Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
+            </StackPanel>-->
         </StackPanel>
 
 
