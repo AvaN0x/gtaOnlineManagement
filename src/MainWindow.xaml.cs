@@ -20,12 +20,22 @@ namespace gtaOnlineManagement
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<oneInDelay> lcasino = new List<oneInDelay>();
         public MainWindow()
         {
             InitializeComponent();
 
-            Casino.Children.Add(new oneInDelay("Casino Lucky Wheel", new DateTime(1, 1, 1)).panel);
-            Casino.Children.Add(new oneInDelay("Test2", new DateTime(1, 1, 1)).panel);
+            lcasino.Add(new oneInDelay("Casino Lucky Wheel", new TimeSpan(1, 0, 0, 0)));
+
+            initCasino();
+        }
+
+        public void initCasino()
+        {
+            foreach (oneInDelay line in lcasino)
+            {
+                Casino.Children.Add(line.panel);
+            }
         }
 
         private void Drag_MouseDown(object sender, MouseButtonEventArgs e)

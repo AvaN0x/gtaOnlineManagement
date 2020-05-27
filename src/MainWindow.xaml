@@ -88,7 +88,7 @@
 
         <!-- Business -->
         <StackPanel x:Name="Business" Orientation="Vertical">
-            <TextBlock Text="Business" FontWeight="Bold" FontSize="14" Foreground="#fff" Margin="8 2 0 0"/>
+            <TextBlock Text="Business" FontWeight="Bold" FontSize="14" Foreground="#dcddde" Margin="8 2 0 0"/>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#fa0000">
                 <Label Content="Bunker Supplies" Style="{StaticResource LabelStyle}"></Label>
                 <Button Style="{StaticResource BusinessButtonStyle}"
