@@ -10,13 +10,12 @@ namespace gtaOnlineManagement
 {
     class oneInDelay
     {
-        // plus adapté aux supplies qu'au timer 24h pour le moment, faire une version ou il faut avoir l'app lancée, faire un bouton qui permet de reset les lignes
+        //TODO plus adapté aux supplies qu'au timer 24h pour le moment, faire une version ou il faut avoir l'app lancée, faire un bouton qui permet de reset les lignes
         public String name { get; set; }
         public TimeSpan duration { get; set; }
         public DateTime lastPush { get; set; }
         public StackPanel panel { get; set; }
-
-        DispatcherTimer timer { get; set; }
+        public DispatcherTimer timer { get; set; }
 
         public oneInDelay(String name, TimeSpan duration)
         {
